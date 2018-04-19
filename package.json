@@ -16,7 +16,8 @@
   },
   "files": [
     "doc/",
-    "lib/"
+    "lib/",
+    "types/"
   ],
   "dependencies": {
     "axios": "0.17.1",
