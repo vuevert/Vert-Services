@@ -25,9 +25,8 @@ module.exports = {
   output: {
     path: resolve('./lib'),
     filename: '[name].js',
-    chunkFilename: '[name].[id].js',
-    library: 'VertService',
-    libraryTarget: 'umd'
+    library: 'VertServices',
+    libraryTarget: 'commonjs2'
   },
 
   externals: {

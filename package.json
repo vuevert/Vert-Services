@@ -13,8 +13,8 @@
     "test": "jest"
   },
   "files": [
-    "*.js",
-    "doc/"
+    "doc/",
+    "lib/"
   ],
   "dependencies": {
     "axios": "0.17.1",
