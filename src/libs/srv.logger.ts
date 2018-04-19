@@ -1,5 +1,13 @@
 import { Inject, Injectable } from '@vert/core'
 
+/**
+ * Logger Service.
+ *
+ * @description
+ * Class that can be a log provider.
+ *
+ * @class Logger
+ */
 @Injectable
 class Logger {
   private logPool: ILog[] = []

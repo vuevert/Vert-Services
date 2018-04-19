@@ -7,6 +7,8 @@
     "email": "chw644@hotmail.com"
   },
   "main": "./lib/index.js",
+  "types": "./types/index.d.ts",
+  "typings": "./types/index.d.ts",
   "license": "MIT",
   "scripts": {
     "build": "webpack --config ./build/webpack.build.conf.js",

@@ -7,7 +7,7 @@ let nextTicks = []
 let tickPromise = null
 
 /**
- * Internal Service: Timer.
+ * Timer Service.
  *
  * @description
  * Timer provides a set of functions to use timer-related function.

@@ -1,6 +1,14 @@
 import { Injectable } from '@vert/core'
 import qs from 'qs'
 
+/**
+ * QS Service.
+ *
+ * @description
+ * This service is used to serialize object to query string.
+ *
+ * @class Qs
+ */
 @Injectable
 class Qs {
   parse (str: string, ...args): {[key: string]: string} {

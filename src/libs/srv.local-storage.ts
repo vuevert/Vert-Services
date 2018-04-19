@@ -1,14 +1,13 @@
 import { Injectable } from '@vert/core'
 
 /**
- * Internal service: LocalStorage
+ * LocalStorage Service.
  *
  * @description
  * LocalStorage service provides a set of functions to control local storage.
  *
  * @class LocalStorage
  */
-
 @Injectable
 class LocalStorage {
   private prefix: string = 'hime_storage_'
