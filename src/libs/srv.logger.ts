@@ -1,9 +1,6 @@
-import { Inject, Injectable } from '@vert/core/injection'
-
-import { LocalStorage } from './srv.local-storage'
+import { Inject, Injectable } from '@vert/core'
 
 @Injectable
-@Inject(LocalStorage)
 class Logger {
   private logPool: ILog[] = []
 
@@ -48,8 +45,6 @@ class Logger {
   getLogs () {
     return this.logPool
   }
-
-  constructor (public localStorage: LocalStorage) {}
 }
 
 enum LogLevel {

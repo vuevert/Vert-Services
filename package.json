@@ -6,6 +6,7 @@
     "name": "LancerComet",
     "email": "chw644@hotmail.com"
   },
+  "main": "./lib/index.js",
   "license": "MIT",
   "scripts": {
     "build": "webpack --config ./build/webpack.build.conf.js",
@@ -29,6 +30,7 @@
     "babel-plugin-transform-es2015-modules-commonjs": "6.26.0",
     "babel-plugin-transform-runtime": "6.23.0",
     "babel-polyfill": "6.26.0",
+    "babel-preset-env": "1.6.1",
     "babel-preset-stage-2": "6.24.1",
     "css-loader": "0.28.9",
     "friendly-errors-webpack-plugin": "1.6.1",

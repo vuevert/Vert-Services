@@ -23,17 +23,41 @@ module.exports = {
   },
 
   output: {
-    path: resolve('./'),
+    path: resolve('./lib'),
     filename: '[name].js',
-    chunkFilename: '[name].[id].[chunkhash].js',
-    library: 'vert',
+    chunkFilename: '[name].[id].js',
+    library: 'VertService',
     libraryTarget: 'umd'
   },
 
+  externals: {
+    vue: {
+      commonjs: 'vue',
+      commonjs2: 'vue',
+      root: 'Vue'
+    },
+
+    'vue-router': {
+      commonjs: 'vue-router',
+      commonjs2: 'vue-router',
+      root: 'VueRouter'
+    },
+
+    vuex: {
+      commonjs: 'vuex',
+      commonjs2: 'vuex',
+      root: 'Vuex'
+    },
+
+    '@vert/core': {
+      commonjs: '@vert/core',
+      commonjs2: '@vert/core',
+      root: 'Vert'
+    }
+  },
   resolve: {
     extensions: ['.js', '.ts'],
     alias: {
-      '@vert/core': resolve('./src'),
       'vue$': 'vue/dist/vue.esm.js'
     }
   },
@@ -61,7 +85,7 @@ module.exports = {
 
   plugins: [
     new webpack.DefinePlugin({
-      'process.env.NODE_ENV': 'process.env.NODE_ENV'
+      'process.env.NODE_ENV': JSON.stringify('production')
     }),
 
     new webpack.optimize.UglifyJsPlugin()

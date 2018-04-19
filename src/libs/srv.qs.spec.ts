@@ -1,4 +1,4 @@
-import { Injector } from '@vert/core/injection'
+import { Injector } from '@vert/core'
 import { Qs } from './srv.qs'
 
 describe('QS Service testing.', () => {

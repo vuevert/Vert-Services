@@ -1,4 +1,4 @@
-import { Injectable, Injector } from '@vert/core/injection'
+import { Injectable, Injector } from '@vert/core'
 
 import { Logger, LogLevel } from './srv.logger'
 

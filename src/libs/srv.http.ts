@@ -1,4 +1,4 @@
-import { Injectable } from '@vert/core/injection'
+import { Injectable } from '@vert/core'
 import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios'
 
 const DEFAULT_TIMEOUT = 5000

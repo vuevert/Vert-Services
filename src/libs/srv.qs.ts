@@ -1,4 +1,4 @@
-import { Injectable } from '@vert/core/injection'
+import { Injectable } from '@vert/core'
 import qs from 'qs'
 
 @Injectable
