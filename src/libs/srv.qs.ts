@@ -9,7 +9,7 @@ import qs from 'qs'
  *
  * @class Qs
  */
-@Injectable
+@Injectable()
 class Qs {
   parse (str: string, ...args): {[key: string]: string} {
     return qs.parse(str, ...args)

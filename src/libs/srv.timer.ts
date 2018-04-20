@@ -12,7 +12,7 @@ let tickPromise = null
  * @description
  * Timer provides a set of functions to use timer-related function.
  */
-@Injectable
+@Injectable()
 class Timer {
   setTimeout (callback: () => void, timeout: number = 1) {
     return setTimeout(callback, timeout)

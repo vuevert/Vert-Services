@@ -1,4 +1,4 @@
-import { Inject, Injectable } from '@vert/core'
+import { Injectable } from '@vert/core'
 
 /**
  * Logger Service.
@@ -8,7 +8,7 @@ import { Inject, Injectable } from '@vert/core'
  *
  * @class Logger
  */
-@Injectable
+@Injectable()
 class Logger {
   private logPool: ILog[] = []
 
