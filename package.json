@@ -7,12 +7,19 @@
     "email": "chw644@hotmail.com"
   },
   "main": "./lib/index.js",
+  "module": "./src/index.ts",
   "types": "./types/index.d.ts",
   "typings": "./types/index.d.ts",
   "license": "MIT",
+  "repository": {
+    "url": "https://github.com/LancerComet/Vert-Services",
+    "type": "git"
+  },
   "scripts": {
     "build": "webpack --config ./build/webpack.build.conf.js",
-    "test": "jest"
+    "test": "jest",
+    "preversion": "npm test",
+    "prepublish": "npm run build"
   },
   "files": [
     "doc/",
@@ -20,6 +27,7 @@
     "types/"
   ],
   "dependencies": {
+    "@vert/core": "^0.1.3",
     "axios": "0.17.1",
     "qs": "6.5.1",
     "reflect-metadata": "0.1.12"
@@ -39,7 +47,6 @@
     "friendly-errors-webpack-plugin": "1.6.1",
     "html-webpack-plugin": "2.30.1",
     "jest": "22.1.4",
-    "jest-serializer-vue": "0.3.0",
     "regenerator-runtime": "0.11.1",
     "ts-jest": "22.0.1",
     "ts-loader": "3.5.0",
@@ -60,25 +67,19 @@
     },
     "transform": {
       ".+\\.jsx?$": "<rootDir>/node_modules/babel-jest",
-      ".+\\.tsx?$": "ts-jest",
-      ".+\\.(vue)$": "<rootDir>/node_modules/vue-jest"
+      ".+\\.tsx?$": "ts-jest"
     },
-    "snapshotSerializers": [
-      "<rootDir>/node_modules/jest-serializer-vue"
-    ],
     "testMatch": [
       "**/*.(spec|test).(js|ts)?(x)"
     ],
     "moduleFileExtensions": [
       "ts",
       "js",
-      "json",
-      "vue"
+      "json"
     ],
     "moduleNameMapper": {
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/.jest/file-mock.js",
-      "\\.(css|less)$": "<rootDir>/.jest/style-mock.js",
-      "vue$": "vue/dist/vue.common.js"
+      "\\.(css|less)$": "<rootDir>/.jest/style-mock.js"
     },
     "mapCoverage": true,
     "setupFiles": [
@@ -86,7 +87,7 @@
     ],
     "coverageDirectory": "<rootDir>/.coverage-report",
     "collectCoverageFrom": [
-      "**/*.{js,jsx,ts,tsx,vue}",
+      "**/*.{js,jsx,ts,tsx}",
       "!**/*.d.ts",
       "!**/node_modules/**"
     ]

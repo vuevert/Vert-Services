@@ -8,7 +8,7 @@ import { Injectable } from '@vert/core'
  *
  * @class LocalStorage
  */
-@Injectable
+@Injectable()
 class LocalStorage {
   private prefix: string = 'hime_storage_'
 
