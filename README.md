@@ -8,4 +8,4 @@ Please use it with [@vert/core](https://github.com/LancerComet/Vert-Core).
 
 ## License 
 
-MIT.
+MIT
