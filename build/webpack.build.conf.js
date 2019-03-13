@@ -1,23 +1,9 @@
 const path = require('path')
 const webpack = require('webpack')
 
-const babelConfig = {
-  "presets": [
-    ["env", {
-      "targets": {
-        "browsers": ["last 3 versions", "> 2%", "ie >= 9", "Firefox >= 30", "Chrome >= 30"]
-      },
-      "modules": false,
-      "loose": true
-    }],
-    "stage-2"
-  ],
-  "plugins": [
-    "transform-runtime"
-  ]
-}
-
 module.exports = {
+  mode: 'production',
+
   entry: {
     'index': resolve('./src/index.ts')
   },
@@ -66,15 +52,11 @@ module.exports = {
       {
         test: /\.js$/,
         loader: 'babel-loader',
-        options: babelConfig,
         exclude: /node_modules/
       }, {
         test: /\.ts$/,
         use: [
-          {
-            loader: 'babel-loader',
-            options: babelConfig
-          },
+          'babel-loader',
           'ts-loader'
         ],
         exclude: /node_modules/
@@ -85,9 +67,7 @@ module.exports = {
   plugins: [
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('production')
-    }),
-
-    new webpack.optimize.UglifyJsPlugin()
+    })
   ]
 }
 

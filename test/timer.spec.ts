@@ -1,16 +1,20 @@
-import { Timer } from './srv.timer'
-
-let count = 0
-const data = { count: 0 }
-Object.defineProperty(data, 'count', {
-  get () {
-    return ++count
-  }
-})
+import { Injector } from '@vert/core'
+import { Timer } from '../src'
 
 describe('Timer Test.', () => {
+  let count = 0
+  const data = { count: 0 }
+  Object.defineProperty(data, 'count', {
+    get () {
+      return ++count
+    }
+  })
+
+  const injector = Injector.create()
+  injector.addSingleton(Timer)
+
   test('nextTick.', (done) => {
-    const timer = new Timer()
+    const timer = injector.get(Timer)
 
     step1()
     step2()

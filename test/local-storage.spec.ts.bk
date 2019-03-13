@@ -1,4 +1,8 @@
-import { LocalStorage } from './srv.local-storage'
+import { Injector } from '@vert/core'
+import { LocalStorage } from '../src'
+
+const injector = Injector.create()
+injector.addSingleton(LocalStorage)
 
 beforeAll(() => {
   global['localStorage'] = {
@@ -17,7 +21,7 @@ beforeAll(() => {
 })
 
 test('LocalStorage service should work.', () => {
-  const localStorage = new LocalStorage()
+  const localStorage = injector.get(LocalStorage)
   expect(localStorage.getItem('MOCKING_DATA')).toEqual('WOW')
 
   localStorage.setItem('NEW_DATA', 'NEW_DATA')

@@ -1,10 +1,11 @@
 import { Injector } from '@vert/core'
-import { Qs } from './srv.qs'
+import { Qs } from '../src'
 
 describe('QS Service testing.', () => {
   let qs: Qs
   beforeAll(() => {
-    const injector = Injector.create(Qs)
+    const injector = Injector.create()
+    injector.addSingleton(Qs)
     qs = injector.get(Qs)
   })
 
