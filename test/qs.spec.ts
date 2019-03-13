@@ -1,5 +1,5 @@
 import { Injector } from '@vert/core'
-import { Qs } from './srv.qs'
+import { Qs } from '../src'
 
 describe('QS Service testing.', () => {
   let qs: Qs

@@ -1,5 +1,5 @@
-import { Injectable, Injector } from '@vert/core'
-import { LocalStorage } from './srv.local-storage'
+import { Injector } from '@vert/core'
+import { LocalStorage } from '../src'
 
 const injector = Injector.create()
 injector.addSingleton(LocalStorage)

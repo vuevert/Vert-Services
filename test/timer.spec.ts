@@ -1,5 +1,5 @@
 import { Injector } from '@vert/core'
-import { Timer } from './srv.timer'
+import { Timer } from '../src'
 
 describe('Timer Test.', () => {
   let count = 0

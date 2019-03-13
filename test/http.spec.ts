@@ -1,7 +1,7 @@
 import { Injector } from '@vert/core'
 import { createServer } from 'http'
 
-import { Http } from './srv.http'
+import { Http } from '../src'
 
 const PORT = 20000
 const HOST = '127.0.0.1'
