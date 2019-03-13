@@ -1,6 +1,6 @@
 # Vert Service
 
-[![Build Status](https://travis-ci.com/LancerComet/Vert.svg?token=5zYzqd8cwqrVEG6tvNJs&branch=master)](https://travis-ci.com/LancerComet/vue-enterprise)
+[![Build Status](https://travis-ci.org/LancerComet/Vert-Services.svg?branch=master)](https://travis-ci.org/LancerComet/Vert-Services)
 
 This is the services plugin which is designed for @vert/core.
 
