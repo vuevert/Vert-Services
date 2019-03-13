@@ -1,11 +1,12 @@
-import { Injectable, Injector } from '@vert/core'
+import { Injector } from '@vert/core'
 
 import { Logger, LogLevel } from './srv.logger'
 
 describe('Log Service testing.', () => {
   let logger: Logger
   beforeAll(() => {
-    const injector = Injector.create(Logger)
+    const injector = Injector.create()
+    injector.addSingleton(Logger)
     logger = injector.get(Logger)
   })
 

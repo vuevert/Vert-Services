@@ -1,4 +1,6 @@
+import { Injector } from '@vert/core'
 import { createServer } from 'http'
+
 import { Http } from './srv.http'
 
 const PORT = 20000
@@ -16,14 +18,17 @@ const mockingData = {
 let httpServer = null
 
 describe('Http service test.', () => {
-  let http: Http
+  let http: Http = null
+  const injector = Injector.create()
+  injector.addSingleton(Http)
 
   beforeAll(() => {
     createHttpServer()
   })
 
   beforeEach(() => {
-    http = new Http()
+    http = injector.get(Http)
+
     http.addRequestInterceptor(config => {
       config.baseURL = `http://${HOST}:${PORT}`
 
